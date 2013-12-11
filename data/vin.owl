@@ -1,0 +1,868 @@
+@prefix : <http://www.vin.com/ontologies/vin.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.vin.com/ontologies/vin.owl> .
+
+<http://www.vin.com/ontologies/vin.owl> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasCepage
+
+:hasCepage rdf:type owl:ObjectProperty ;
+           
+           rdfs:domain :Vin ;
+           
+           rdfs:range :VinCepage .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasCru
+
+:hasCru rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Vin ;
+        
+        rdfs:range :VinCru ;
+        
+        rdfs:subPropertyOf :hasOrigin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasCuvee
+
+:hasCuvee rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :Vin ;
+          
+          rdfs:range :VinCuvee .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasOrigin
+
+:hasOrigin rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasSol
+
+:hasSol rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Vin ;
+        
+        rdfs:range :VinSol ;
+        
+        rdfs:subPropertyOf :hasOrigin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#isCepageOf
+
+:isCepageOf rdf:type owl:ObjectProperty ;
+            
+            owl:inverseOf :hasCepage .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#isCruOf
+
+:isCruOf rdf:type owl:ObjectProperty ;
+         
+         owl:inverseOf :hasCru ;
+         
+         rdfs:subPropertyOf :isOriginOf .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#isCuveeOf
+
+:isCuveeOf rdf:type owl:ObjectProperty ;
+           
+           owl:inverseOf :hasCuvee .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#isOriginOf
+
+:isOriginOf rdf:type owl:ObjectProperty ;
+            
+            owl:inverseOf :hasOrigin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#isSolOf
+
+:isSolOf rdf:type owl:ObjectProperty ;
+         
+         owl:inverseOf :hasSol ;
+         
+         rdfs:subPropertyOf :isOriginOf .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.vin.com/ontologies/vin.owl#hasDegreValue
+
+:hasDegreValue rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.vin.com/ontologies/vin.owl#AbymesCru
+
+:AbymesCru rdf:type owl:Class ;
+           
+           rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#AltesseVin
+
+:AltesseVin rdf:type owl:Class ;
+            
+            rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ApremontCru
+
+:ApremontCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ArbinCru
+
+:ArbinCru rdf:type owl:Class ;
+          
+          rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ArgileSol
+
+:ArgileSol rdf:type owl:Class ;
+           
+           rdfs:subClassOf :VinSol .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#AyzeCru
+
+:AyzeCru rdf:type owl:Class ;
+         
+         rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#BergeronVin
+
+:BergeronVin rdf:type owl:Class ;
+             
+             rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#BlancVin
+
+:BlancVin rdf:type owl:Class ;
+          
+          rdfs:subClassOf :VinCepage ;
+          
+          owl:disjointWith :RougeVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#CalcaireSol
+
+:CalcaireSol rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinSol .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ChardonnayVin
+
+:ChardonnayVin rdf:type owl:Class ;
+               
+               rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ChasselasVin
+
+:ChasselasVin rdf:type owl:Class ;
+              
+              rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ChautagneCru
+
+:ChautagneCru rdf:type owl:Class ;
+              
+              rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Chignin-BergeronCru
+
+:Chignin-BergeronCru rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ChigninCru
+
+:ChigninCru rdf:type owl:Class ;
+            
+            rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#CruetCru
+
+:CruetCru rdf:type owl:Class ;
+          
+          rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#FrangyCru
+
+:FrangyCru rdf:type owl:Class ;
+           
+           rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#GamayVin
+
+:GamayVin rdf:type owl:Class ;
+          
+          rdfs:subClassOf :RougeVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#HighDegreVin
+
+:HighDegreVin rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Vin
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasDegreValue ;
+                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                owl:onDatatype xsd:integer ;
+                                                                                owl:withRestrictions ( [ xsd:minInclusive 12
+                                                                                                       ]
+                                                                                                     )
+                                                                              ]
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf :Vin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#JacquèreVin
+
+:JacquèreVin rdf:type owl:Class ;
+             
+             rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#JongieuxCru
+
+:JongieuxCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#LowDegreVin
+
+:LowDegreVin rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Vin
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasDegreValue ;
+                                                          owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                               owl:onDatatype xsd:integer ;
+                                                                               owl:withRestrictions ( [ xsd:maxExclusive 12
+                                                                                                      ]
+                                                                                                    )
+                                                                             ]
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Vin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MarestelCru
+
+:MarestelCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MarignanCru
+
+:MarignanCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MarinCru
+
+:MarinCru rdf:type owl:Class ;
+          
+          rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MoletteVin
+
+:MoletteVin rdf:type owl:Class ;
+            
+            rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MondeuseVin
+
+:MondeuseVin rdf:type owl:Class ;
+             
+             rdfs:subClassOf :RougeVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Mondeuse_blancheVin
+
+:Mondeuse_blancheVin rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :BlancVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MonterminodCru
+
+:MonterminodCru rdf:type owl:Class ;
+                
+                rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MonthouxCru
+
+:MonthouxCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#MontmélianCru
+
+:MontmélianCru rdf:type owl:Class ;
+               
+               rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Pinot_noirVin
+
+:Pinot_noirVin rdf:type owl:Class ;
+               
+               rdfs:subClassOf :RougeVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ROUSSETTE_DE_SAVOIE
+
+:ROUSSETTE_DE_SAVOIE rdf:type owl:Class ;
+                     
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:intersectionOf ( :WhiteVin
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasCepage ;
+                                                                  owl:allValuesFrom :AltesseVin
+                                                                ]
+                                                              )
+                                         ] ;
+                     
+                     rdfs:subClassOf :WhiteVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ROUSSETTE_DE_SAVOIE_FRANGY
+
+:ROUSSETTE_DE_SAVOIE_FRANGY rdf:type owl:Class ;
+                            
+                            owl:equivalentClass [ rdf:type owl:Class ;
+                                                  owl:intersectionOf ( :ROUSSETTE_DE_SAVOIE
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasCru ;
+                                                                         owl:allValuesFrom :FrangyCru
+                                                                       ]
+                                                                     )
+                                                ] ;
+                            
+                            rdfs:subClassOf :ROUSSETTE_DE_SAVOIE .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ROUSSETTE_DE_SAVOIE_MARESTEL
+
+:ROUSSETTE_DE_SAVOIE_MARESTEL rdf:type owl:Class ;
+                              
+                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                    owl:intersectionOf ( :ROUSSETTE_DE_SAVOIE
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :hasCru ;
+                                                                           owl:allValuesFrom :MarestelCru
+                                                                         ]
+                                                                       )
+                                                  ] ;
+                              
+                              rdfs:subClassOf :ROUSSETTE_DE_SAVOIE .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ROUSSETTE_DE_SAVOIE_MONTERMINOD
+
+:ROUSSETTE_DE_SAVOIE_MONTERMINOD rdf:type owl:Class ;
+                                 
+                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                       owl:intersectionOf ( :ROUSSETTE_DE_SAVOIE
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty :hasCru ;
+                                                                              owl:allValuesFrom :MonterminodCru
+                                                                            ]
+                                                                          )
+                                                     ] ;
+                                 
+                                 rdfs:subClassOf :ROUSSETTE_DE_SAVOIE .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#ROUSSETTE_DE_SAVOIE_MONTHOUX
+
+:ROUSSETTE_DE_SAVOIE_MONTHOUX rdf:type owl:Class ;
+                              
+                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                    owl:intersectionOf ( :ROUSSETTE_DE_SAVOIE
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :hasCru ;
+                                                                           owl:allValuesFrom :MonthouxCru
+                                                                         ]
+                                                                       )
+                                                  ] ;
+                              
+                              rdfs:subClassOf :ROUSSETTE_DE_SAVOIE .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#RedVin
+
+:RedVin rdf:type owl:Class ;
+        
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:intersectionOf ( :Vin
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasCepage ;
+                                                     owl:someValuesFrom :RougeVin
+                                                   ]
+                                                 )
+                            ] ;
+        
+        rdfs:subClassOf :Vin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#RipailleCru
+
+:RipailleCru rdf:type owl:Class ;
+             
+             rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#RougeVin
+
+:RougeVin rdf:type owl:Class ;
+          
+          rdfs:subClassOf :VinCepage .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_ARBIN
+
+:SAVOIE_ARBIN rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :RedVin
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasCru ;
+                                                           owl:allValuesFrom :ArbinCru
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_CHAUTAGNE
+
+:SAVOIE_CHAUTAGNE rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( :RedVin
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasCru ;
+                                                               owl:allValuesFrom :ChautagneCru
+                                                             ]
+                                                           )
+                                      ] ;
+                  
+                  rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_CHIGNIN
+
+:SAVOIE_CHIGNIN rdf:type owl:Class ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( :RedVin
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasCru ;
+                                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:unionOf ( :Chignin-BergeronCru
+                                                                                               :ChigninCru
+                                                                                             )
+                                                                               ]
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_JONGIEUX
+
+:SAVOIE_JONGIEUX rdf:type owl:Class ;
+                 
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:intersectionOf ( :RedVin
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasCru ;
+                                                              owl:allValuesFrom :JongieuxCru
+                                                            ]
+                                                          )
+                                     ] ;
+                 
+                 rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_ROUGE
+
+:SAVOIE_ROUGE rdf:type owl:Class ;
+              
+              rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SAVOIE_ST_JEAN_LA_PORTE
+
+:SAVOIE_ST_JEAN_LA_PORTE rdf:type owl:Class ;
+                         
+                         owl:equivalentClass [ rdf:type owl:Class ;
+                                               owl:intersectionOf ( :RedVin
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :hasCru ;
+                                                                      owl:allValuesFrom :Saint-Jean-de-la-PorteCru
+                                                                    ]
+                                                                  )
+                                             ] ;
+                         
+                         rdfs:subClassOf :RedVin .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Saint-Jean-de-la-PorteCru
+
+:Saint-Jean-de-la-PorteCru rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Saint-Jeoire-PrieuréCru
+
+:Saint-Jeoire-PrieuréCru rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :VinCru .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#SiliceSol
+
+:SiliceSol rdf:type owl:Class ;
+           
+           rdfs:subClassOf :VinSol .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#Vin
+
+:Vin rdf:type owl:Class ;
+     
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasSol ;
+                       owl:someValuesFrom :VinSol
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasDegreValue ;
+                       owl:someValuesFrom xsd:integer
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasCepage ;
+                       owl:someValuesFrom :VinCepage
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasCuvee ;
+                       owl:someValuesFrom :VinCuvee
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasCru ;
+                       owl:onClass :VinCru ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                     ] .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#VinCepage
+
+:VinCepage rdf:type owl:Class .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#VinCru
+
+:VinCru rdf:type owl:Class .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#VinCuvee
+
+:VinCuvee rdf:type owl:Class .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#VinProducteur
+
+:VinProducteur rdf:type owl:Class .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#VinSol
+
+:VinSol rdf:type owl:Class ;
+        
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :ArgileSol
+                                            :CalcaireSol
+                                            :SiliceSol
+                                          )
+                            ] .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#WhiteVin
+
+:WhiteVin rdf:type owl:Class ;
+          
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCepage ;
+                                owl:someValuesFrom :BlancVin
+                              ] ;
+          
+          rdfs:subClassOf :Vin .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.vin.com/ontologies/vin.owl#GamayVin
+
+:GamayVin rdf:type :GamayVin ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#argileSol
+
+:argileSol rdf:type :ArgileSol ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#chigninCru
+
+:chigninCru rdf:type :ChigninCru ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#monVin
+
+:monVin rdf:type :Vin ,
+                 owl:NamedIndividual ;
+        
+        :hasDegreValue 13 ;
+        
+        :hasCepage :GamayVin ;
+        
+        :hasSol :argileSol ;
+        
+        :hasCru :chigninCru ;
+        
+        :hasCuvee :vinCuveeTemp .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#monVin2
+
+:monVin2 rdf:type :WhiteVin ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#vinCuveeTemp
+
+:vinCuveeTemp rdf:type :VinCuvee ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.vin.com/ontologies/vin.owl#vinProdTemp
+
+:vinProdTemp rdf:type :VinProducteur ,
+                      owl:NamedIndividual .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :GamayVin
+                :MondeuseVin
+                :Pinot_noirVin
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Vin
+                :VinCepage
+                :VinCru
+                :VinCuvee
+                :VinProducteur
+                :VinSol
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ArgileSol
+                :CalcaireSol
+                :SiliceSol
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AbymesCru
+                :ApremontCru
+                :ArbinCru
+                :AyzeCru
+                :ChautagneCru
+                :Chignin-BergeronCru
+                :ChigninCru
+                :CruetCru
+                :FrangyCru
+                :JongieuxCru
+                :MarestelCru
+                :MarignanCru
+                :MarinCru
+                :MonterminodCru
+                :MonthouxCru
+                :MontmélianCru
+                :RipailleCru
+                :Saint-Jean-de-la-PorteCru
+                :Saint-Jeoire-PrieuréCru
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AltesseVin
+                :BergeronVin
+                :ChardonnayVin
+                :ChasselasVin
+                :JacquèreVin
+                :MoletteVin
+                :Mondeuse_blancheVin
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

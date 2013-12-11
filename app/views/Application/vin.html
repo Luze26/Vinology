@@ -1,0 +1,10 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<div class="row">
+    #{if vin == null}
+        Ce vin n'existe pas dans notre ontologie !!!
+    #{/if}
+    #{else}
+        <h2>${vin.name}</h2>
+    #{/else}
+</div>

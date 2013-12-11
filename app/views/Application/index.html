@@ -1,4 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
-
-Liste des vins :
+<div class="row">
+    Liste des vins :
+    <ul>
+        #{list items:vins, as:'vin'}
+            <li><a href="/vin/${vin.name}">${vin.name}</a></li>
+        #{/list}
+    </ul>
+</div>
