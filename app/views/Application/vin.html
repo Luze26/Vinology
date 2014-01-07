@@ -2,10 +2,86 @@
 #{set title:'Home' /}
 <div class="row">
     #{if vin == null}
-        Ce vin n'existe pas dans notre ontologie !!!
+        We don't know this wine :'( !!!
     #{/if}
     #{else}
-        <h2>${vin.getName()}</h2>
-        Cépage: ${vin.getCepage()}
+        <div class="page-header col-xs-12">
+            <h1>${vin.getName()}</h1>
+        </div>
+
+        <!-- DEGRE -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Degré</div>
+                <div class="panel-body">
+                    #{if vin.getDegre() == null}
+                        No degre given for this wine.
+                    #{/if}
+                    #{else}
+                        ${vin.getDegre()}
+                    #{/else}
+                </div>
+            </div>
+        </div>
+
+        <!-- CEPAGE -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Cépage</div>
+                <div class="panel-body">
+                    #{if vin.getCepage() == null}
+                        No cépage given for this wine.
+                    #{/if}
+                    #{else}
+                        ${vin.getCepage()}
+                    #{/else}
+                </div>
+            </div>
+        </div>
+
+        <!-- CRU -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Cru</div>
+                <div class="panel-body">
+                    #{if vin.getCru() == null}
+                        No cru given for this wine.
+                    #{/if}
+                    #{else}
+                        ${vin.getCru()}
+                    #{/else}
+                </div>
+            </div>
+        </div>
+
+        <!-- CUVEE -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Cuvée</div>
+                <div class="panel-body">
+                    #{if vin.getCuvee() == null}
+                        No cuvee given for this wine.
+                    #{/if}
+                    #{else}
+                        ${vin.getCuvee()}
+                    #{/else}
+                </div>
+            </div>
+        </div>
+
+        <!-- SOL -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Sol</div>
+                <div class="panel-body">
+                    #{if vin.getSol() == null}
+                        No sol given for this wine.
+                    #{/if}
+                    #{else}
+                        ${vin.getSol()}
+                    #{/else}
+                </div>
+            </div>
+        </div>
     #{/else}
 </div>
