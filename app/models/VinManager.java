@@ -9,36 +9,16 @@ import com.hp.hpl.jena.rdf.model.*;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import org.mindswap.pellet.jena.PelletInfGraph;
 import org.mindswap.pellet.jena.PelletReasonerFactory;
+import play.Play;
 import play.vfs.VirtualFile;
 
 public class VinManager {
 
-    private static VinManager instance = null;
+    private static final String MODEL_PREFIX = Play.configuration.getProperty("ontology.prefix");
 
-    private PelletInfGraph pellet;
-    private final String MODEL_PREFIX = "http://www.vin.com/ontologies/vin.owl";
-    protected final OntModel model = ModelFactory.createOntologyModel(PelletReasonerFactory.THE_SPEC);
-
-    private VinManager() {
-        try {
-            loadData("");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void loadData(String path) throws IOException {
-        pellet = (PelletInfGraph) model.getGraph();
-
-        VirtualFile vf = VirtualFile.fromRelativePath("/data/vin.owl");
-        File realFile = vf.getRealFile();
-        FileReader fileReader = new FileReader(realFile);
-        model.read(fileReader, MODEL_PREFIX, "TURTLE");
-    }
-
-    public List<Vin> getVins() {
+    public static List<Vin> getVins() {
         List<Vin> vins = new ArrayList<Vin>();
-        OntClass vinClass = model.getOntClass(MODEL_PREFIX + "#Vin");
+        OntClass vinClass = OntManager.getModel().getOntClass(OntManager.appendPrefix("#Vin"));
         for (ExtendedIterator<? extends OntResource> it= vinClass.listInstances(); it.hasNext(); ) {
             Individual vinIndividual = (Individual) it.next();
             vins.add(new Vin(vinIndividual));
@@ -47,15 +27,8 @@ public class VinManager {
         return vins;
     }
 
-    public static VinManager getInstance() {
-        if(instance == null) {
-            instance = new VinManager();
-        }
-        return instance;
-    }
-
-    public Vin findVin(String name) {
-        Individual vinIndividual = model.getIndividual(MODEL_PREFIX + "#" + name);
+    public static Vin findVin(String name) {
+        Individual vinIndividual = OntManager.getModel().getIndividual(OntManager.appendPrefix("#" + name));
         if(vinIndividual != null) {
             return new Vin(vinIndividual);
         }

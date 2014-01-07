@@ -5,6 +5,7 @@
         Ce vin n'existe pas dans notre ontologie !!!
     #{/if}
     #{else}
-        <h2>${vin.name}</h2>
+        <h2>${vin.getName()}</h2>
+        Cépage: ${vin.getCepage()}
     #{/else}
 </div>

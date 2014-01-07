@@ -5,6 +5,8 @@
 # Home page
 GET     /                                       Application.index
 GET     /vin/{name}                             Application.vin
+GET     /query                                  Application.query
+POST    /query/execute                          Application.executeQuery
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
