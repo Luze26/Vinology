@@ -4,6 +4,7 @@
 
     <!-- ERROR -->
     <div ng-show="error" class="alert alert-dismissable alert-danger" ng-cloak>
+        <button type="button" class="close" ng-click="error = null">×</button>
         {{error}}
     </div>
 
@@ -12,7 +13,15 @@
         <div class="panel-heading">Type your query below</div>
         <div class="panel-body">
             <textarea class="form-control" rows="3" placeholder="Your query..." ng-model="query"></textarea>
-            <buttton class="btn btn-primary queryBtn" ng-disabled="query === null || query === ''" ng-click="executeQuery()">Execute</buttton>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary queryBtn dropdown-toggle" data-toggle="dropdown">
+                    Try with some examples <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="example in examples" ng-click="showExample(example)"><a href="#">{{example.title}}</a></li>
+                </ul>
+            </div>
+            <buttton class="btn btn-primary queryBtnRight" ng-disabled="query === null || query === ''" ng-click="executeQuery()">Execute</buttton>
         </div>
     </div>
 
@@ -23,11 +32,11 @@
             <table ng-show="result" class="table table-striped table-bordered table-hover" ng-cloak>
                 <thead>
                     <tr>
-                        <th ng-repeat="x in result.head.vars">{{x}}</th>
+                        <th ng-repeat="x in result.head.vars" ng-click="changeOrder(x)">{{x}}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="binding in result.results.bindings">
+                    <tr ng-repeat="binding in result.results.bindings | orderBy:predicate:reverse">
                         <td ng-repeat="x in result.head.vars">{{binding[x]}}</td>
                     </tr>
                 </tbody>

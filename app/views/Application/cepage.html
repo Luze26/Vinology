@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+<div class="row">
+#{if cepage == null}
+    We don't know this cépage :'( !!!
+#{/if}
+#{else}
+    <div class="page-header col-xs-12">
+        <h1>${cepage.getName()}</h1>
+    </div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Les vins du cépage</th>
+        </tr>
+        </thead>
+        <tbody>
+            #{list items:cepage.getVins(), as:'vin'}
+            <tr>
+                <td><a href="/vin/${vin.name}">${vin.name}</a></td>
+            </tr>
+            #{/list}
+        </tbody>
+    </table>
+#{/else}
+</div>

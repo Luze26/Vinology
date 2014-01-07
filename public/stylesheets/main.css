@@ -3,6 +3,10 @@
 }
 
 .queryBtn {
+    margin-top: 15px;
+}
+
+.queryBtnRight {
     float: right;
     margin-top: 15px;
 }

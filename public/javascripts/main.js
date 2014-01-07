@@ -1,6 +1,6 @@
 angular.module("vinology", []);
 
-angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function($scope, $http) {
+angular.module("vinology").controller("queryCtrl", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
     $scope.query = "";
 
@@ -8,7 +8,30 @@ angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function(
 
     $scope.result = null;
 
+    $scope.predicate = null;
+
+    $scope.reverse = false;
+
     $scope.loading = false;
+
+    $scope.examples = [{title: "Gamay", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?vin\nwhere { ?vin vin:hasCepage vin:GamayVin }"},
+        {title: "I love white wine <3", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+            + "select ?type\nwhere { ?type rdfs:subClassOf vin:BlancVin }"},
+        {title: "Get me everything !!!", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?x ?y ?z\nwhere { ?x ?y ?z }"}];
+
+    $scope.showExample = function(example) {
+        $scope.query = example.query;
+    };
+
+    $scope.changeOrder = function(predicate) {
+        if($scope.predicate === predicate) {
+            $scope.reverse = !$scope.reverse;
+        }
+        else {
+            $scope.predicate = predicate;
+            $scope.reverse = false;
+        }
+    };
 
     $scope.executeQuery = function() {
         if(!$scope.loading) {

@@ -5,6 +5,7 @@
 # Home page
 GET     /                                       Application.index
 GET     /vin/{name}                             Application.vin
+GET     /cepage/{name}                          Application.cepage
 GET     /query                                  Application.query
 POST    /query/execute                          Application.executeQuery
 
