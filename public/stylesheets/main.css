@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+.navbar-brand {
+    padding: 10px;
+}
+
 .queryBtn {
     margin-top: 15px;
 }
