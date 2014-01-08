@@ -12,8 +12,6 @@ import java.util.List;
 public class Application extends Controller {
 
     public static void index() {
-        List<Vin> vins = OntManager.getOntClassResources(new Vin(), "Vin");
-        List<Cepage> cepages = OntManager.getOntClassResources(new Cepage(), "VinCepage");
-        render(vins, cepages);
+        render();
     }
 }

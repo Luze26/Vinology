@@ -4,19 +4,19 @@ import com.hp.hpl.jena.ontology.Individual;
 import models.ResourceClass;
 import models.factory.Factory;
 
-public class Cepage extends ResourceClass implements Factory<Cepage> {
+public class Cru extends ResourceClass implements Factory<Cru> {
 
-    public Cepage() {
+    public Cru() {
         super();
     }
 
-    public Cepage(Individual individual) {
-        super(individual, "hasCepage");
+    public Cru(Individual individual) {
+        super(individual, "hasCru");
     }
 
     @Override
-    public Cepage factory(Individual individual) {
-        return new Cepage(individual);
+    public Cru factory(Individual individual) {
+        return new Cru(individual);
     }
 
     public String toJson() {

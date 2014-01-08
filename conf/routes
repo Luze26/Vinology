@@ -16,6 +16,10 @@ GET     /api/cepages                            Resources.cepagesApi
 # Resource page
 GET     /vin/{name}                             Resource.vin
 GET     /cepage/{name}                          Resource.cepage
+GET     /cru/{name}                             Resource.cru
+GET     /cuvee/{name}                           Resource.cuvee
+GET     /producteur/{name}                      Resource.producteur
+GET     /sol/{name}                             Resource.sol
 
 # Query
 GET     /query                                  Query.query

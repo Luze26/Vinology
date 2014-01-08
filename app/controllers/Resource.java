@@ -1,8 +1,7 @@
 package controllers;
 
 import models.OntManager;
-import models.concrete.Cepage;
-import models.concrete.Vin;
+import models.concrete.*;
 import play.mvc.Controller;
 
 public class Resource extends Controller {
@@ -17,5 +16,29 @@ public class Resource extends Controller {
         String name = params.get("name");
         Cepage cepage = OntManager.findEntity(new Cepage(), name);
         render(cepage);
+    }
+
+    public static void cru() {
+        String name = params.get("name");
+        Cru cru = OntManager.findEntity(new Cru(), name);
+        render(cru);
+    }
+
+    public static void cuvee() {
+        String name = params.get("name");
+        Cuvee cuvee = OntManager.findEntity(new Cuvee(), name);
+        render(cuvee);
+    }
+
+    public static void producteur() {
+        String name = params.get("name");
+        Producteur producteur = OntManager.findEntity(new Producteur(), name);
+        render(producteur);
+    }
+
+    public static void sol() {
+        String name = params.get("name");
+        Sol sol = OntManager.findEntity(new Sol(), name);
+        render(sol);
     }
 }

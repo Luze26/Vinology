@@ -1,0 +1,16 @@
+<div class="row">
+    <strong class="col-xs-2">${_label} :</strong>
+    <span class="col-xs-10">
+        #{if _value == null}
+            Non indiqué
+        #{/if}
+        #{else}
+            #{if _link != null}
+                <a href="${_link}" title="${_value}">${_value}</a>
+            #{/if}
+            #{else}
+                ${_value}
+            #{/else}
+        #{/else}
+    </span>
+</div>

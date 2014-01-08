@@ -1,26 +1,26 @@
 #{extends 'main.html' /}
 
 <div class="row">
-#{if cepage == null}
+#{if cru == null}
     #{set title: "oO" /}
     <div style="margin-top: 70px">
-        On ne connait pas ce cépage :'( !!!
+        On ne connait pas ce cru :'( !!!
     </div>
 #{/if}
 #{else}
-    #{set title: cepage.getName() /}
+    #{set title:cru.getName() /}
     <div class="page-header col-xs-12">
-        <h1>${cepage.getName()}</h1>
+        <h1>${cru.getName()}</h1>
     </div>
 
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr>
-            <th>Les vins du cépage</th>
+            <th>Les vins du cru</th>
         </tr>
         </thead>
         <tbody>
-            #{list items:cepage.getVins(), as:'vin'}
+            #{list items:cru.getVins(), as:'vin'}
             <tr>
                 <td><a href="/vin/${vin.name}">${vin.name}</a></td>
             </tr>

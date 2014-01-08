@@ -1,87 +1,31 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+
 <div class="row">
-    #{if vin == null}
+#{if vin == null}
+    #{set title: "oO" /}
+    <div style="margin-top: 70px">
         We don't know this wine :'( !!!
-    #{/if}
-    #{else}
-        <div class="page-header col-xs-12">
-            <h1>${vin.getName()}</h1>
-        </div>
+    </div>
+#{/if}
+#{else}
+    #{set title:vin.getName() /}
 
-        <!-- DEGRE -->
-        <div class="col-xs-12 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Degré</div>
-                <div class="panel-body">
-                    #{if vin.getDegre() == null}
-                        No degre given for this wine.
-                    #{/if}
-                    #{else}
-                        ${vin.getDegre()}
-                    #{/else}
-                </div>
+    <div class="page-header col-xs-12">
+        <h1>${vin.getName()}</h1>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Informations</div>
+            <div class="panel-body">
+                #{propertyInfo label:"Cépage", value:vin.getCepage(), link:("/cepage/" + vin.getCepage()) /}
+                #{propertyInfo label:"Cuvée", value:vin.getCuvee(), link:("/cuvee/" + vin.getCuvee()) /}
+                #{propertyInfo label:"Sol", value:vin.getSol(), link:("/sol/" + vin.getSol()) /}
+                #{propertyInfo label:"Producteur", value:vin.getProducteur(), link:("/producteur/" + vin.getProducteur()) /}
+                #{propertyInfo label:"Cru", value:vin.getCru(), link:("/cru/" + vin.getCru()) /}
+                #{propertyInfo label:"Degré d'alcool", value:vin.getDegre() /}
             </div>
         </div>
-
-        <!-- CEPAGE -->
-        <div class="col-xs-12 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Cépage</div>
-                <div class="panel-body">
-                    #{if vin.getCepage() == null}
-                        No cépage given for this wine.
-                    #{/if}
-                    #{else}
-                        ${vin.getCepage()}
-                    #{/else}
-                </div>
-            </div>
-        </div>
-
-        <!-- CRU -->
-        <div class="col-xs-12 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Cru</div>
-                <div class="panel-body">
-                    #{if vin.getCru() == null}
-                        No cru given for this wine.
-                    #{/if}
-                    #{else}
-                        ${vin.getCru()}
-                    #{/else}
-                </div>
-            </div>
-        </div>
-
-        <!-- CUVEE -->
-        <div class="col-xs-12 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Cuvée</div>
-                <div class="panel-body">
-                    #{if vin.getCuvee() == null}
-                        No cuvee given for this wine.
-                    #{/if}
-                    #{else}
-                        ${vin.getCuvee()}
-                    #{/else}
-                </div>
-            </div>
-        </div>
-
-        <!-- SOL -->
-        <div class="col-xs-12 col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Sol</div>
-                <div class="panel-body">
-                    #{if vin.getSol() == null}
-                        No sol given for this wine.
-                    #{/if}
-                    #{else}
-                        ${vin.getSol()}
-                    #{/else}
-                </div>
-            </div>
-        </div>
-    #{/else}
+    </div>
+#{/else}
 </div>
