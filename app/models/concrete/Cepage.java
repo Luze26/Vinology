@@ -26,4 +26,8 @@ public class Cepage extends ResourceClass implements Factory<Cepage> {
     public Cepage factory(Individual individual) {
         return new Cepage(individual);
     }
+
+    public String toJson() {
+        return "{\"name\":\"" + this.getName() + "\"}";
+    }
 }

@@ -4,10 +4,22 @@
 
 # Home page
 GET     /                                       Application.index
-GET     /vin/{name}                             Application.vin
-GET     /cepage/{name}                          Application.cepage
-GET     /query                                  Application.query
-POST    /query/execute                          Application.executeQuery
+
+# Resources List
+GET     /vins                                   Resources.vins
+GET     /cepages                                Resources.cepages
+
+# Resources List API
+GET     /api/vins                               Resources.vinsApi
+GET     /api/cepages                            Resources.cepagesApi
+
+# Resource page
+GET     /vin/{name}                             Resource.vin
+GET     /cepage/{name}                          Resource.cepage
+
+# Query
+GET     /query                                  Query.query
+POST    /query/execute                          Query.executeQuery
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

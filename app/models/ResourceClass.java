@@ -53,6 +53,4 @@ public abstract class ResourceClass {
                 "select ?vin\n"+
                 "where { ?vin vin:" + propertyName + " vin:" + this.getName() + "}";
     }
-
-
 }

@@ -44,4 +44,13 @@ public class Vin extends ResourceClass implements Factory<Vin> {
     public String getDegre() {
         return this.getProperty(degre, "hasDegreValue");
     }
+
+    public String getProducteur() {
+        return this.getProperty(degre, "hasProducteur");
+    }
+
+    public String toJson() {
+        return "{\"name\":\"" + this.getName() + "\", \"cepage\":\"" + this.getCepage() + "\", \"cru\":\"" + this.getCru() + "\", \"cuvee\":\"" + this.getCuvee() +
+                "\", \"sol\":\"" + this.getSol() + "\", \"degre\":" + this.getDegre() + ", \"producteur\":\"" + this.getProducteur() + "\"}";
+    }
 }
