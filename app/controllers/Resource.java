@@ -41,4 +41,9 @@ public class Resource extends Controller {
         Sol sol = OntManager.findEntity(new Sol(), name);
         render(sol);
     }
+
+    public static void resource() {
+        String uri = params.get("uri");
+        OntManager.getRedirection(uri);
+    }
 }

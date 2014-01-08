@@ -102,4 +102,15 @@ public class OntManager {
 
         return resources;
     }
+
+    public static String getRedirection(String uri) {
+        OntResource resource = OntManager.getModel().getOntResource(uri);
+        if(resource != null) {
+            for(ExtendedIterator<Resource> it = resource.listRDFTypes(true); it.hasNext();) {
+                System.out.println("lklmkmlk");          Resource r =  it.next();
+                System.out.println(r.getLocalName());
+
+            }
+        }     return "ll";
+    }
 }

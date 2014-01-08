@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
 .navbar-brand {
     padding: 10px;
 }

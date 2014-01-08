@@ -8,12 +8,15 @@ GET     /                                       Application.index
 # Resources List
 GET     /vins                                   Resources.vins
 GET     /cepages                                Resources.cepages
+GET     /producteurs                            Resources.producteurs
 
 # Resources List API
 GET     /api/vins                               Resources.vinsApi
 GET     /api/cepages                            Resources.cepagesApi
+GET     /api/producteurs                        Resources.producteursApi
 
 # Resource page
+GET     /resource                               Resource.resource
 GET     /vin/{name}                             Resource.vin
 GET     /cepage/{name}                          Resource.cepage
 GET     /cru/{name}                             Resource.cru

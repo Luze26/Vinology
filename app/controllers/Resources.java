@@ -2,6 +2,7 @@ package controllers;
 
 import models.OntManager;
 import models.concrete.Cepage;
+import models.concrete.Producteur;
 import models.concrete.Vin;
 import play.mvc.*;
 
@@ -38,6 +39,24 @@ public class Resources extends Controller {
         List<Cepage> cepages = OntManager.getOntClassResources(new Cepage(), "VinCepage");
         for(Cepage cepage: cepages) {
             sb.append(cepage.toJson());
+            sb.append(',');
+        }
+        sb.deleteCharAt(sb.length()-1);
+        sb.append(']');
+        renderJSON(sb.toString());
+    }
+
+    public static void producteurs() {
+        render();
+    }
+
+    public static void producteursApi() {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+
+        List<Producteur> producteurs = OntManager.getOntClassResources(new Producteur(), "VinProducteur");
+        for(Producteur producteur: producteurs) {
+            sb.append(producteur.toJson());
             sb.append(',');
         }
         sb.deleteCharAt(sb.length()-1);

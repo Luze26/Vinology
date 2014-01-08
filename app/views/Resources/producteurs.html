@@ -1,0 +1,22 @@
+#{extends 'main.html' /}
+#{set title:'Nos Producteurs' /}
+<div class="row" ng-controller="resourcesListCtrl">
+    <div class="page-header col-xs-12">
+        <h1>Nos Producteurs</h1>
+    </div>
+
+    <table class="table table-striped table-bordered table-hover col-xs-12" ng-controller="producteursCtrl">
+        <thead>
+        <tr>
+            #{tableHeader name:'name', label:'Nom'/}
+            #{tableHeader name:'realName', label:'Entreprise'/}
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="producteur in producteurs | orderBy:predicate:reverse" ng-cloak>
+                #{tableCell value:'{{producteur.name}}', link:'/cepage/{{producteur.name}}'/}
+                <td>{{producteur.realName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

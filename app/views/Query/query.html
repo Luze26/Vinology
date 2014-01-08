@@ -1,8 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'Requête' /}
-#{set 'moreScripts'}
-    #{script 'queryCtrl.js'/}
-#{/set}
+<div ng-controller="resourcesListCtrl">
 <div class="row" ng-controller="queryCtrl">
 
     <div class="page-header col-xs-12">
@@ -18,18 +16,18 @@
     <!-- QUERY -->
     <div class="col-xs-12">
         <div class="panel panel-default">
-            <div class="panel-heading">Type your query below</div>
+            <div class="panel-heading">Votre requête</div>
             <div class="panel-body">
-                <textarea class="form-control" rows="3" placeholder="Your query..." ng-model="query"></textarea>
+                <textarea class="form-control" rows="5" placeholder="Tapez votre requête ici..." ng-model="query"></textarea>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary queryBtn dropdown-toggle" data-toggle="dropdown">
-                        Try with some examples <span class="caret"></span>
+                        Essayez quelques exemples ;) <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li ng-repeat="example in examples" ng-click="showExample(example)"><a href="#">{{example.title}}</a></li>
                     </ul>
                 </div>
-                <buttton class="btn btn-primary queryBtnRight" ng-disabled="query === null || query === ''" ng-click="executeQuery()">Execute</buttton>
+                <buttton class="btn btn-primary queryBtnRight" ng-disabled="query === null || query === ''" ng-click="executeQuery()">Exécuter</buttton>
             </div>
         </div>
     </div>
@@ -37,28 +35,61 @@
     <!-- RESULT -->
     <div class="col-xs-12">
         <div class="panel panel-default">
-            <div class="panel-heading">Result</div>
+            <div class="panel-heading">Résultats</div>
             <div class="panel-body">
-                <table ng-show="result" class="table table-striped table-bordered table-hover" ng-cloak>
-                    <thead>
-                        <tr>
-                            <th ng-repeat="x in result.head.vars" ng-click="changeOrder(x)">{{x}}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="binding in result.results.bindings | orderBy:predicate:reverse">
-                            <td ng-repeat="x in result.head.vars">{{binding[x]}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p ng-hide="result || loading">
-                    Nothing to show you :'(.
-                </p>
-                <div ng-show="loading" ng-cloak class="loading">
-                    <img src="@{'/public/images/loading.gif'}" alt="loading" />
-                    <div>We are working for you.</div>
+                <ul class="nav nav-tabs">
+                    <li ng-class="{'active': display === 'parsed'}"><a href="#parsed" ng-click="display = 'parsed'">Traité</a></li>
+                    <li ng-class="{'active': display === 'brut'}"><a href="#brut" ng-click="display = 'brut'">Brut</a></li>
+                </ul>
+                <div class="tab-content" ng-switch="display">
+                    <div ng-switch-when="parsed">
+                        <table ng-show="result" class="table table-striped table-bordered table-hover" ng-cloak>
+                            <thead>
+                            <tr>
+                                <th ng-repeat="x in result.head.vars" ng-click="changeOrder(x)">{{x}} <span ng-class="predicate === x ? (reverse ? 'caret-down' : 'caret') : 'caret-placeholder'"></span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="binding in result.results.bindings | orderBy:predicate:reverse">
+                                <td ng-repeat="x in result.head.vars">
+                                    <a ng-show="getLinkForBinding(binding[x]) != null" ng-href="{{getLinkForBinding(binding[x])}}">{{binding[x].value}}</a>
+                                    <span ng-hide="getLinkForBinding(binding[x]) != null">{{binding[x].value}}</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p ng-hide="result || loading">
+                            Nothing to show you :'(.
+                        </p>
+                        <div ng-show="loading" ng-cloak class="loading">
+                            <img src="@{'/public/images/loading.gif'}" alt="loading" />
+                            <div>On est en train de travailler pour vous.</div>
+                        </div>
+                    </div>
+                    <div ng-switch-when="brut">
+                        <table ng-show="result" class="table table-striped table-bordered table-hover" ng-cloak>
+                            <thead>
+                            <tr>
+                                <th ng-repeat="x in result.head.vars">{{x}}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="binding in result.results.bindings | orderBy:predicate:reverse">
+                                <td ng-repeat="x in result.head.vars">{{binding[x]}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p ng-hide="result || loading">
+                            Nothing to shofw you :'(.
+                        </p>
+                        <div ng-show="loading" ng-cloak class="loading">
+                            <img src="@{'/public/images/loading.gif'}" alt="loading" />
+                            <div>On est en train de travailler pour vous.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
