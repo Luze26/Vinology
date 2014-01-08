@@ -13,11 +13,11 @@ public class Vin extends ResourceClass implements Factory<Vin> {
     private String degre = null;
 
     public Vin() {
-        super(null);
+        super();
     }
 
     public Vin(Individual individual) {
-        super(individual);
+        super(individual, null);
     }
 
     @Override

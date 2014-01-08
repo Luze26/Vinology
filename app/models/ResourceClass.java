@@ -4,17 +4,28 @@ import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.impl.PropertyImpl;
+import models.concrete.Vin;
+
+import java.util.List;
 
 public abstract class ResourceClass {
 
     protected Individual individual;
+    private String propertyName = null;
 
-    public ResourceClass(Individual individual) {
+    public ResourceClass() {}
+
+    public ResourceClass(Individual individual, String propertyName) {
         this.individual = individual;
+        this.propertyName = propertyName;
     }
 
     public String getName() {
         return individual.getLocalName();
+    }
+
+    public List<Vin> getVins() {
+        return OntManager.getResourcesFromQuery(new Vin(), getVinsQuery(), "vin");
     }
 
     protected String getProperty(String property, String prefix) {
@@ -36,4 +47,12 @@ public abstract class ResourceClass {
         }
         return property;
     }
+
+    private String getVinsQuery() {
+        return  "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\n"+
+                "select ?vin\n"+
+                "where { ?vin vin:" + propertyName + " vin:" + this.getName() + "}";
+    }
+
+
 }

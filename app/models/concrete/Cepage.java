@@ -15,29 +15,15 @@ import java.util.List;
 public class Cepage extends ResourceClass implements Factory<Cepage> {
 
     public Cepage() {
-        super(null);
+        super();
     }
 
     public Cepage(Individual individual) {
-        super(individual);
+        super(individual, "hasCepage");
     }
 
     @Override
     public Cepage factory(Individual individual) {
         return new Cepage(individual);
-    }
-
-    public List<Vin> getVins() {
-        List<Vin> vins = new ArrayList<Vin>();
-        Property prop = new PropertyImpl(OntManager.appendPrefix("#Vin"));
-        individual.getOntClass().listIsDefinedBy();
-        System.out.println("AAAA");
-
-        for (ExtendedIterator<? extends RDFNode> it= individual.getOntClass().listIsDefinedBy(); it.hasNext(); ) {
-            System.out.println("LLLLLL");
-            it.next();
-        }
-
-        return vins;
     }
 }
