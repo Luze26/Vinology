@@ -6,6 +6,8 @@ import models.factory.Factory;
 
 public class Cuvee extends ResourceClass implements Factory<Cuvee> {
 
+    private String year = null;
+
     public Cuvee() {
         super();
     }
@@ -19,7 +21,11 @@ public class Cuvee extends ResourceClass implements Factory<Cuvee> {
         return new Cuvee(individual);
     }
 
+    public String getYear() {
+        return this.getProperty(year, "hasYear");
+    }
+
     public String toJson() {
-        return "{\"name\":\"" + this.getName() + "\"}";
+        return "{\"name\":\"" + this.getName() + "\", \"year\":" + this.getYear() + "}";
     }
 }

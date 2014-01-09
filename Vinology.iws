@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e9afa3-fd4a-4f7d-b9ec-e547e3b266ba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/Resources/producteurs.html" />
-      <change type="DELETED" beforePath="C:\Users\yuzel\Cours\SIBD\Vinology\public\javascripts\queryCtrl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\yuzel\Cours\SIBD\Vinology\public\javascripts\resourcesListCtrl.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/OntManager.java" afterPath="$PROJECT_DIR$/app/models/OntManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Resource.java" afterPath="$PROJECT_DIR$/app/controllers/Resource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Resources.java" afterPath="$PROJECT_DIR$/app/controllers/Resources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/concrete/Cuvee.java" afterPath="$PROJECT_DIR$/app/models/concrete/Cuvee.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vinology.iws" afterPath="$PROJECT_DIR$/Vinology.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Resources/cepages.html" afterPath="$PROJECT_DIR$/app/views/Resources/cepages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/main.js" afterPath="$PROJECT_DIR$/public/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Query/query.html" afterPath="$PROJECT_DIR$/app/views/Query/query.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Resources/vins.html" afterPath="$PROJECT_DIR$/app/views/Resources/vins.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Resource/cuvee.html" afterPath="$PROJECT_DIR$/app/views/Resource/cuvee.html" />
     </list>
     <ignored path="Vinology.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,6 +72,15 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="46" column="39" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="935">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OntManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="16" selection-start="3761" selection-end="3880" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2074">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,13 +88,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OntManager.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+      <file leaf-file-name="cuvee.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="16" selection-start="3761" selection-end="3880" vertical-scroll-proportion="0.80862534" vertical-offset="1253" max-vertical-offset="2074">
+            <state line="17" column="39" selection-start="386" selection-end="386" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="697">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cuvee.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/concrete/Cuvee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="85" selection-start="677" selection-end="677" vertical-scroll-proportion="0.6415094" vertical-offset="0" max-vertical-offset="742">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cru.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/concrete/Cru.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="51" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Producteur.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/concrete/Producteur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="4" selection-start="519" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="producteur.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/Resource/producteur.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="4" selection-start="341" selection-end="447" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,12 +189,10 @@
         <option value="$PROJECT_DIR$/app/views/tags/tableHeader.html" />
         <option value="$PROJECT_DIR$/app/models/concrete/Cepage.java" />
         <option value="$PROJECT_DIR$/app/models/concrete/Sol.java" />
-        <option value="$PROJECT_DIR$/app/models/concrete/Cuvee.java" />
         <option value="$PROJECT_DIR$/app/models/concrete/Cru.java" />
         <option value="$PROJECT_DIR$/app/views/Resource/cepage.html" />
         <option value="$PROJECT_DIR$/app/views/Resource/cru.html" />
         <option value="$PROJECT_DIR$/app/views/Resource/sol.html" />
-        <option value="$PROJECT_DIR$/app/views/Resource/cuvee.html" />
         <option value="$PROJECT_DIR$/app/models/concrete/Producteur.java" />
         <option value="$PROJECT_DIR$/app/views/Resource/producteur.html" />
         <option value="$PROJECT_DIR$/app/views/Resource/vin.html" />
@@ -174,6 +212,8 @@
         <option value="$PROJECT_DIR$/public/javascripts/main.js" />
         <option value="$PROJECT_DIR$/app/controllers/Resource.java" />
         <option value="$PROJECT_DIR$/app/models/OntManager.java" />
+        <option value="$PROJECT_DIR$/app/views/Resource/cuvee.html" />
+        <option value="$PROJECT_DIR$/app/models/concrete/Cuvee.java" />
       </list>
     </option>
   </component>
@@ -212,6 +252,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -536,7 +577,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -794,11 +834,12 @@
       <workItem from="1388742326620" duration="58000" />
       <workItem from="1389115889676" duration="19367000" />
       <workItem from="1389200967620" duration="16911000" />
+      <workItem from="1389264897809" duration="224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47596000" />
+    <option name="totallyTimeSpent" value="47820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -810,7 +851,6 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -830,16 +870,17 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -857,8 +898,8 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -879,11 +920,25 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+    <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="54" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
+        <state line="109" column="16" selection-start="3761" selection-end="3880" vertical-scroll-proportion="0.0" vertical-offset="1819" max-vertical-offset="2074">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="38" selection-start="2555" selection-end="2555" vertical-scroll-proportion="0.0" vertical-offset="1128" max-vertical-offset="2108">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="54" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concrete/Vin.java">
@@ -909,9 +964,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714">
-          <folding />
-        </state>
+        <state line="31" column="51" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
@@ -923,9 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/vin.owl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="773" column="29" selection-start="22838" selection-end="22838" vertical-scroll-proportion="0.0" vertical-offset="12841" max-vertical-offset="14858">
-          <folding />
-        </state>
+        <state line="773" column="29" selection-start="22838" selection-end="22838" vertical-scroll-proportion="0.0" vertical-offset="12841" max-vertical-offset="14858" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
@@ -946,9 +997,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="54" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
-          <folding />
-        </state>
+        <state line="6" column="54" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concrete/Vin.java">
@@ -979,9 +1028,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="106550" selection-start="106550" selection-end="106550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="708">
-          <folding />
-        </state>
+        <state line="0" column="106550" selection-start="106550" selection-end="106550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="708" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/factory/Factory.java">
@@ -993,25 +1040,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28644" selection-start="93875" selection-end="93875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="3" column="28644" selection-start="93875" selection-end="93875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/vin.owl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1639" column="49" selection-start="51913" selection-end="51913" vertical-scroll-proportion="0.30997303" vertical-offset="27633" max-vertical-offset="29767">
-          <folding />
-        </state>
+        <state line="1639" column="49" selection-start="51913" selection-end="51913" vertical-scroll-proportion="0.30997303" vertical-offset="27633" max-vertical-offset="29767" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="8" column="7" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Query.java">
@@ -1032,37 +1071,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cuvee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concrete/Sol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="228" selection-end="228" vertical-scroll-proportion="-2.2368422" vertical-offset="0" max-vertical-offset="629">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1073,75 +1087,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Producteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="69" selection-start="708" selection-end="708" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="629">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tags/tableCell.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="10" selection-start="0" selection-end="41" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="10" selection-start="0" selection-end="41" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resource/cru.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="4" selection-start="66" selection-end="121" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="4" column="4" selection-start="66" selection-end="121" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resource/sol.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-2.4605262" vertical-offset="0" max-vertical-offset="629">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Resource/producteur.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="74" selection-start="437" selection-end="437" vertical-scroll-proportion="-3.8026316" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-2.4605262" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resource/vin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="10" selection-start="1129" selection-end="1129" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tags/propertyInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="394" selection-end="394" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
+        <state line="14" column="11" selection-start="394" selection-end="394" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="357" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10" selection-start="143" selection-end="143" vertical-scroll-proportion="0.118715085" vertical-offset="0" max-vertical-offset="716">
-          <folding />
-        </state>
+        <state line="5" column="10" selection-start="143" selection-end="143" vertical-scroll-proportion="0.118715085" vertical-offset="0" max-vertical-offset="716" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="49" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.5139665" vertical-offset="159" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="31" column="49" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.5139665" vertical-offset="159" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
@@ -1164,9 +1144,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resource/cepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="29" selection-start="301" selection-end="301" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="12" column="29" selection-start="301" selection-end="301" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resources/vins.html">
@@ -1178,9 +1156,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Resources/cepages.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="1" column="28" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
@@ -1199,16 +1175,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tags/tableHeader.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="170" selection-start="62" selection-end="170" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="170" selection-start="62" selection-end="170" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="952">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="952" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ResourceClass.java">
@@ -1237,15 +1209,56 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/Resource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="39" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="16" selection-start="3761" selection-end="3880" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2074">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+    <entry file="file://$PROJECT_DIR$/app/views/Resource/producteur.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="16" selection-start="3761" selection-end="3880" vertical-scroll-proportion="0.80862534" vertical-offset="1253" max-vertical-offset="2074">
+        <state line="16" column="4" selection-start="341" selection-end="447" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="39" selection-start="386" selection-end="386" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="697">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cru.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="51" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concrete/Producteur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="519" selection-end="608" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cuvee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="85" selection-start="677" selection-end="677" vertical-scroll-proportion="0.6415094" vertical-offset="0" max-vertical-offset="742">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
