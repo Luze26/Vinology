@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e9afa3-fd4a-4f7d-b9ec-e547e3b266ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/concrete/Producteur.java" afterPath="$PROJECT_DIR$/app/models/concrete/Producteur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vinology.iws" afterPath="$PROJECT_DIR$/Vinology.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Application/index.html" afterPath="$PROJECT_DIR$/app/views/Application/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/main.js" afterPath="$PROJECT_DIR$/public/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Resource/producteur.html" afterPath="$PROJECT_DIR$/app/views/Resource/producteur.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/propertyInfo.html" afterPath="$PROJECT_DIR$/app/views/tags/propertyInfo.html" />
+      <change type="DELETED" beforePath="C:\Users\yuzel\Cours\SIBD\Vinology\app\models\concrete\Classs.java" afterPath="" />
     </list>
     <ignored path="Vinology.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,11 +97,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+      <file leaf-file-name="Cepage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/concrete/Cepage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="20" selection-start="810" selection-end="810" vertical-scroll-proportion="0.47486034" vertical-offset="0" max-vertical-offset="716">
-              <folding />
+            <state line="25" column="38" selection-start="543" selection-end="543" vertical-scroll-proportion="0.57277626" vertical-offset="0" max-vertical-offset="742">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,15 +154,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/tags/propertyInfo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="25" selection-start="93" selection-end="93" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cuvee.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -734,12 +722,12 @@
       <workItem from="1389115889676" duration="19367000" />
       <workItem from="1389200967620" duration="16911000" />
       <workItem from="1389264897809" duration="13758000" />
-      <workItem from="1389289746728" duration="638000" />
+      <workItem from="1389289746728" duration="1238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61992000" />
+    <option name="totallyTimeSpent" value="62592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -937,15 +925,6 @@
         <state line="8" column="7" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="0" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/concrete/Sol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
@@ -979,15 +958,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/concrete/Cru.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="4" selection-start="201" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Classs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1188,6 +1158,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="20" selection-start="810" selection-end="810" vertical-scroll-proportion="0.47486034" vertical-offset="0" max-vertical-offset="716">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="38" selection-start="543" selection-end="543" vertical-scroll-proportion="0.57277626" vertical-offset="0" max-vertical-offset="742">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
