@@ -108,7 +108,7 @@ public class OntManager {
         return resource;
     }
 
-    public static String getRedirection(String uri) {            System.out.println(uri);
+    public static String getRedirection(String uri) {
         OntResource resource = OntManager.getModel().getOntResource(uri);
         if(resource != null) {
             for(ExtendedIterator<Resource> it = resource.listRDFTypes(false); it.hasNext();) {

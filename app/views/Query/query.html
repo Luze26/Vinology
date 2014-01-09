@@ -54,7 +54,7 @@
                             <tbody>
                             <tr ng-repeat="binding in result.results.bindings | orderBy:predicate:reverse">
                                 <td ng-repeat="x in result.head.vars">
-                                    <a ng-show="getLinkForBinding(binding[x]) != null" ng-href="{{getLinkForBinding(binding[x])}}">{{binding[x].value}}</a>
+                                    <a ng-show="getLinkForBinding(binding[x]) != null" ng-href="{{getLinkForBinding(binding[x])}}">{{stripUri(binding[x].value)}}</a>
                                     <span ng-hide="getLinkForBinding(binding[x]) != null">{{binding[x].value}}</span>
                                 </td>
                             </tr>

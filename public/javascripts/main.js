@@ -95,6 +95,10 @@ angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function(
         return null;
     };
 
+    $scope.stripUri = function(uri) {
+        return uri.slice(38);
+    };
+
     $scope.executeQuery = function() {
         if(!$scope.loading) {
             $scope.result = null;

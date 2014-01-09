@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e9afa3-fd4a-4f7d-b9ec-e547e3b266ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/concrete/Cuvee.java" afterPath="$PROJECT_DIR$/app/models/concrete/Cuvee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ResourceClass.java" afterPath="$PROJECT_DIR$/app/models/ResourceClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Resource/cuvee.html" afterPath="$PROJECT_DIR$/app/views/Resource/cuvee.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/OntManager.java" afterPath="$PROJECT_DIR$/app/models/OntManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/main.js" afterPath="$PROJECT_DIR$/public/javascripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Query/query.html" afterPath="$PROJECT_DIR$/app/views/Query/query.html" />
     </list>
     <ignored path="Vinology.iws" />
@@ -94,7 +93,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="47" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
+            <state line="95" column="40" selection-start="2844" selection-end="2844" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2210">
               <folding />
             </state>
           </provider>
@@ -109,19 +108,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="query.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Query/query.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="49" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.25462306" vertical-offset="671" max-vertical-offset="1734">
+            <state line="56" column="159" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-10.807693" vertical-offset="671" max-vertical-offset="1734">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OntManager.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OntManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="41" selection-start="3885" selection-end="3893" vertical-scroll-proportion="0.0" vertical-offset="1684" max-vertical-offset="2516">
+            <state line="110" column="53" selection-start="3710" selection-end="3710" vertical-scroll-proportion="0.21967655" vertical-offset="1707" max-vertical-offset="2516">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,11 +174,9 @@
         <option value="$PROJECT_DIR$/app/models/concrete/Classs.java" />
         <option value="$PROJECT_DIR$/app/views/Resource/class.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/models/OntManager.java" />
         <option value="$PROJECT_DIR$/app/views/tags/resourceTag.html" />
         <option value="$PROJECT_DIR$/app/controllers/Resource.java" />
         <option value="$PROJECT_DIR$/app/views/Resource/resource.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/main.js" />
         <option value="$PROJECT_DIR$/app/views/Resources/vins.html" />
         <option value="$PROJECT_DIR$/app/views/Resource/sol.html" />
         <option value="$PROJECT_DIR$/app/views/Resource/producteur.html" />
@@ -193,6 +190,8 @@
         <option value="$PROJECT_DIR$/app/models/ResourceClass.java" />
         <option value="$PROJECT_DIR$/app/views/Resource/cuvee.html" />
         <option value="$PROJECT_DIR$/app/views/Query/query.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/main.js" />
+        <option value="$PROJECT_DIR$/app/models/OntManager.java" />
       </list>
     </option>
   </component>
@@ -813,12 +812,12 @@
       <workItem from="1388742326620" duration="58000" />
       <workItem from="1389115889676" duration="19367000" />
       <workItem from="1389200967620" duration="16911000" />
-      <workItem from="1389264897809" duration="11506000" />
+      <workItem from="1389264897809" duration="11946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59102000" />
+    <option name="totallyTimeSpent" value="59542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1236,12 +1235,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cuvee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="41" selection-start="3885" selection-end="3893" vertical-scroll-proportion="0.0" vertical-offset="1684" max-vertical-offset="2516">
+        <state line="29" column="25" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Query/query.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="159" selection-start="2953" selection-end="2953" vertical-scroll-proportion="-10.807693" vertical-offset="671" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="799">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,33 +1267,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/concrete/Cuvee.java">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+        <state line="95" column="40" selection-start="2844" selection-end="2844" vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/OntManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="53" selection-start="3710" selection-end="3710" vertical-scroll-proportion="0.21967655" vertical-offset="1707" max-vertical-offset="2516">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Resource/cuvee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="47" selection-start="2441" selection-end="2441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Query/query.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="49" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.25462306" vertical-offset="671" max-vertical-offset="1734">
-          <folding />
         </state>
       </provider>
     </entry>
