@@ -1,0 +1,8 @@
+<span class="col-xs-12">
+    #{if _resource.getURI().indexOf("http://www.vin.com/ontologies/vin.owl#") == 0}
+        <a href="/resource?uri=${java.net.URLEncoder.encode(_resource.getURI(), "UTF-8")}" title="${_resource.getLocalName()}">${_resource.getLocalName()}</a>
+    #{/if}
+    #{else}
+        ${_resource.getLocalName()}
+    #{/else}
+</span>

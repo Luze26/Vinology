@@ -103,14 +103,40 @@ public class OntManager {
         return resources;
     }
 
-    public static String getRedirection(String uri) {
+    public static OntResource getOntResource(String uri) {
+        OntResource resource = OntManager.getModel().getOntResource(uri);
+        return resource;
+    }
+
+    public static String getRedirection(String uri) {            System.out.println(uri);
         OntResource resource = OntManager.getModel().getOntResource(uri);
         if(resource != null) {
-            for(ExtendedIterator<Resource> it = resource.listRDFTypes(true); it.hasNext();) {
-                System.out.println("lklmkmlk");          Resource r =  it.next();
-                System.out.println(r.getLocalName());
-
+            for(ExtendedIterator<Resource> it = resource.listRDFTypes(false); it.hasNext();) {
+                Resource r =  it.next();
+                String name = r.getLocalName();
+                if (name.equals("Class")) {
+                    return null;
+                }
+                else if(name.equals("Vin")) {
+                    return "/vin/" + resource.getLocalName();
+                }
+                else if(name.equals("VinCru")) {
+                    return "/cru/" + resource.getLocalName();
+                }
+                else if(name.equals("VinCepage")) {
+                    return "/cepage/" + resource.getLocalName();
+                }
+                else if(name.equals("VinCuvee")) {
+                    return "/cuvee/" + resource.getLocalName();
+                }
+                else if(name.equals("VinProducteur")) {
+                    return "/producteur/" + resource.getLocalName();
+                }
+                else if(name.equals("VinSol")) {
+                    return "/sol/" + resource.getLocalName();
+                }
             }
-        }     return "ll";
+        }
+        return null;
     }
 }

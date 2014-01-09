@@ -1,8 +1,14 @@
 package controllers;
 
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntResource;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import models.OntManager;
 import models.concrete.*;
 import play.mvc.Controller;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Resource extends Controller {
 
@@ -44,6 +50,22 @@ public class Resource extends Controller {
 
     public static void resource() {
         String uri = params.get("uri");
-        OntManager.getRedirection(uri);
+        String redirection = OntManager.getRedirection(uri);
+        if(redirection != null) {
+            redirect(redirection);
+        }
+        OntResource resource = OntManager.getOntResource(uri);
+
+        List<OntClass> subClass = new ArrayList<OntClass>();
+        for(ExtendedIterator<OntClass> it = resource.asClass().listSubClasses(true); it.hasNext();) {
+            subClass.add(it.next());
+        }
+
+        List<OntResource> instances = new ArrayList<OntResource>();
+        for(ExtendedIterator<? extends OntResource> it = resource.asClass().listInstances(false); it.hasNext();) {
+            instances.add(it.next());
+        }
+
+        render(resource, subClass, instances);
     }
 }

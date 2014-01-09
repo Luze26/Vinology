@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'Resource' /}
+<div class="row">
+#{if resource == null}
+    #{set title: "oO" /}
+    <div style="margin-top: 70px">
+        On ne connait pas cette ressource :'( !!!
+    </div>
+#{/if}
+#{else}
+    <div class="page-header col-xs-12">
+        <h1>Resource: ${resource.getLocalName()}</h1>
+    </div>
+
+    <div class="col-xs-12">
+        #{if resource.isClass() == true}
+            <strong>Classe:</strong> Oui<br/>
+            <strong>Sous classes connues :</strong><br/>
+            #{list items:subClass, as:'sClass' }
+                #{resourceTag resource:sClass/}
+            #{/list}
+            <strong>Instances connues :</strong><br/>
+            #{list items:instances, as:'instance' }
+                #{resourceTag resource:instance/}
+            #{/list}
+        #{/if}
+    </div>
+#{/else}
+</div>
