@@ -27,10 +27,10 @@
                 </div>
                 <div class="navbar-collapse collapse navbar-responsive-collapse" id="navbar-main">
                     <ul class="nav navbar-nav">
-                        <li><a href="/vins">Nos Vins</a></li>
-                        <li><a href="/cepages">Nos Cépages</a></li>
-                        <li><a href="/producteurs">Nos Producteurs</a></li>
-                        <li><a href="/query">Custom Query</a></li>
+                        <li #{if menu == 'vins'} class="active" #{/if}><a href="/vins">Nos Vins</a></li>
+                        <li #{if menu == 'cepages'} class="active" #{/if}><a href="/cepages">Nos Cépages</a></li>
+                        <li #{if menu == 'prod'} class="active" #{/if}><a href="/producteurs">Nos Producteurs</a></li>
+                        <li #{if menu == 'query'} class="active" #{/if}><a href="/query">Requêter notre ontologie</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'Nos Producteurs' /}
+#{set menu:'prod' /}
 <div class="row" ng-controller="resourcesListCtrl">
     <div class="page-header col-xs-12">
         <h1>Nos Producteurs</h1>
@@ -14,7 +15,7 @@
         </thead>
         <tbody>
             <tr ng-repeat="producteur in producteurs | orderBy:predicate:reverse" ng-cloak>
-                #{tableCell value:'{{producteur.name}}', link:'/cepage/{{producteur.name}}'/}
+                #{tableCell value:'{{producteur.name}}', link:'/producteur/{{producteur.name}}'/}
                 <td>{{producteur.realName}}</td>
             </tr>
         </tbody>

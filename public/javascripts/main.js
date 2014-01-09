@@ -78,9 +78,11 @@ angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function(
     $scope.display = "parsed";
 
     $scope.examples = [{title: "Mon altesse", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?vin\nwhere { ?vin vin:hasCepage vin:CepAltesse }"},
-        {title: "I love white wine <3", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+        {title: "J'aime le vin blanc <3", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
             + "select ?type\nwhere { ?type rdfs:subClassOf vin:BlancVin }"},
-        {title: "Get me everything !!!", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?x ?y ?z\nwhere { ?x ?y ?z }"}];
+        {title: "Les producteurs de l'altesse", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?producteur ?nom\nwhere {\n"
+            + "?vin vin:hasCepage vin:CepAltesse .\n?vin vin:hasProducteur ?producteur .\n?producteur vin:hasName ?nom .}"},
+        {title: "Montre moi tout !!!", query: "select ?x ?y ?z\nwhere { ?x ?y ?z }"}];
 
     $scope.showExample = function(example) {
         $scope.query = example.query;
@@ -108,10 +110,10 @@ angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function(
                     $scope.loading = false;
                     switch(data.error) {
                         case "Parse Error":
-                            $scope.error = "An error occurred while parsing your query ! Check your syntax, you can do better ;)."
+                            $scope.error = "Une erreur est survenue en traitant votre requête !\n Vérifiez votre syntaxe, vous pouvez faire mieux ;)."
                             break;
                         default:
-                            $scope.error = "An error occurred !";
+                            $scope.error = "Une erreur est survenue !";
                     }
                 });
         }

@@ -1,5 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Requête' /}
+#{set menu:'query' /}
+
 <div ng-controller="resourcesListCtrl">
 <div class="row" ng-controller="queryCtrl">
 
@@ -59,7 +61,7 @@
                             </tbody>
                         </table>
                         <p ng-hide="result || loading">
-                            Nothing to show you :'(.
+                            Encore rien à montrer :'(.
                         </p>
                         <div ng-show="loading" ng-cloak class="loading">
                             <img src="@{'/public/images/loading.gif'}" alt="loading" />
@@ -80,7 +82,7 @@
                             </tbody>
                         </table>
                         <p ng-hide="result || loading">
-                            Nothing to shofw you :'(.
+                            Encore rien à montrer :'(.
                         </p>
                         <div ng-show="loading" ng-cloak class="loading">
                             <img src="@{'/public/images/loading.gif'}" alt="loading" />
