@@ -1,9 +1,13 @@
 package models;
 
 import com.hp.hpl.jena.ontology.Individual;
+import com.hp.hpl.jena.ontology.OntClass;
+import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.impl.PropertyImpl;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import models.concrete.Vin;
 
 import java.util.List;
@@ -42,6 +46,19 @@ public abstract class ResourceClass {
                 }
                 else if(node.isURIResource()) {
                     property = node.toString();
+                }
+            }
+        }
+        return property;
+    }
+
+    protected Boolean isOfClass(Boolean property, String className) {
+        if(property == null) {
+            for (ExtendedIterator<Resource> it= individual.listRDFTypes(false); it.hasNext(); ) {
+                Resource r = it.next();
+                if(r.getLocalName().equals(className)) {
+                    property = true;
+                    return property;
                 }
             }
         }

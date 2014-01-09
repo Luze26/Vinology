@@ -7,6 +7,7 @@ import models.factory.Factory;
 public class Cuvee extends ResourceClass implements Factory<Cuvee> {
 
     private String year = null;
+    private Boolean old = null;
 
     public Cuvee() {
         super();
@@ -23,6 +24,10 @@ public class Cuvee extends ResourceClass implements Factory<Cuvee> {
 
     public String getYear() {
         return this.getProperty(year, "hasYear");
+    }
+
+    public Boolean isOld() {
+        return this.isOfClass(old, "OldCuvee");
     }
 
     public String toJson() {

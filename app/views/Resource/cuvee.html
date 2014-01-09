@@ -15,7 +15,13 @@
     </div>
 
     <p class="col-xs-12">
-        Année : <strong>${cuvee.getYear()}</strong>
+        Année : <strong>${cuvee.getYear()}</strong><br/>
+        #{if cuvee.isOld()}
+            <strong>Cuvée ancienne</strong>
+        #{/if}
+        #{else}
+            <strong>Cuvée nouvelle</strong>
+        #{/else}
     </p>
 
     <table class="table table-striped table-bordered table-hover">
