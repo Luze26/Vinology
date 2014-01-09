@@ -884,20 +884,24 @@
                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                      ] ,
                      [ rdf:type owl:Restriction ;
-                       owl:onProperty :hasCepage ;
-                       owl:someValuesFrom :VinCepage
-                     ] ,
-                     [ rdf:type owl:Restriction ;
-                       owl:onProperty :hasDegreValue ;
-                       owl:someValuesFrom xsd:double
+                       owl:onProperty :hasSol ;
+                       owl:someValuesFrom :VinSol
                      ] ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :hasCuvee ;
                        owl:someValuesFrom :VinCuvee
                      ] ,
                      [ rdf:type owl:Restriction ;
-                       owl:onProperty :hasSol ;
-                       owl:someValuesFrom :VinSol
+                       owl:onProperty :hasCepage ;
+                       owl:someValuesFrom :VinCepage
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasProducteur ;
+                       owl:someValuesFrom :VinProducteur
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasDegreValue ;
+                       owl:someValuesFrom xsd:double
                      ] .
 
 
@@ -1254,7 +1258,8 @@
       
       :hasProducteur :ProdChevBernard ;
       
-      :hasSol :SolCalcaire ;
+      :hasSol :SolArgile ,
+              :SolCalcaire ;
       
       :hasCuvee :cuvee2011 .
 
@@ -1463,7 +1468,8 @@
       
       :hasProducteur :ProdPrieure ;
       
-      :hasSol :SolArgile ;
+      :hasSol :SolArgile ,
+              :SolSilice ;
       
       :hasCuvee :cuvee2005 .
 
@@ -1621,15 +1627,6 @@
 
 
 
-###  http://www.vin.com/ontologies/vin.owl#cuvee1999
-
-:cuvee1999 rdf:type :VinCuvee ,
-                    owl:NamedIndividual ;
-           
-           :hasYear 1999 .
-
-
-
 ###  http://www.vin.com/ontologies/vin.owl#cuvee2005
 
 :cuvee2005 rdf:type :VinCuvee ,
@@ -1691,12 +1688,19 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Vin
-                :VinCepage
-                :VinCru
-                :VinCuvee
-                :VinProducteur
-                :VinSol
+  owl:members ( :AltesseVin
+                :BergeronVin
+                :ChardonnayVin
+                :ChasselasVin
+                :JacquèreVin
+                :MoletteVin
+                :Mondeuse_blancheVin
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ArgileSol
+                :CalcaireSol
+                :SiliceSol
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
@@ -1722,19 +1726,12 @@
               )
 ] .
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :ArgileSol
-                :CalcaireSol
-                :SiliceSol
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :AltesseVin
-                :BergeronVin
-                :ChardonnayVin
-                :ChasselasVin
-                :JacquèreVin
-                :MoletteVin
-                :Mondeuse_blancheVin
+  owl:members ( :Vin
+                :VinCepage
+                :VinCru
+                :VinCuvee
+                :VinProducteur
+                :VinSol
               )
 ] .
 
