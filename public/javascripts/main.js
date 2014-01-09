@@ -80,7 +80,7 @@ angular.module("vinology").controller("queryCtrl", ['$scope', '$http', function(
     $scope.examples = [{title: "Mon altesse", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?vin\nwhere { ?vin vin:hasCepage vin:CepAltesse }"},
         {title: "J'aime le vin blanc <3", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
             + "select ?type\nwhere { ?type rdfs:subClassOf vin:BlancVin }"},
-        {title: "Les producteurs de l'altesse", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect ?producteur ?nom\nwhere {\n"
+        {title: "Les producteurs de l'altesse", query: "prefix vin: <http://www.vin.com/ontologies/vin.owl#>\nselect distinct ?producteur ?nom\nwhere {\n"
             + "?vin vin:hasCepage vin:CepAltesse .\n?vin vin:hasProducteur ?producteur .\n?producteur vin:hasName ?nom .}"},
         {title: "Montre moi tout !!!", query: "select distinct ?x \nwhere { ?x ?y ?z }"}];
 
